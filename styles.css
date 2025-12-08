@@ -1,0 +1,101 @@
+:root {
+    --clr-title-200: #f9faf8;
+    --clr-text-500: #e5e7eb;
+    --clr-title-800: #1f2937;
+
+    --clr-bg: #1f2937;
+    --clr-btn: #3882f6;
+
+    --font: 'Cinzel', serif;
+
+    /*Font Weight*/
+    --fw-light: 300;
+    --fw-black: 900;
+
+    /* Font Size */
+    --fs-logo: 24px;
+    --fs-h1: 48px;
+    --fs-h2: 36px;
+    --fs-secondary: 18px;
+
+    /* Section Width */
+    --sec-width: 70vw;
+}
+
+
+/*Reset*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font-family: inherit;
+}
+
+html {
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    padding-inline: 0;
+}
+
+
+/* Styles */
+body {
+    font-family: var(--font);
+}
+
+.container {
+    /* if got repetitive */
+    /* display: flex; */
+    max-width: var(--sec-width);
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: var(--clr-bg);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    font-size: var(--fs-secondary);
+    color: var(--clr-text-500);
+}
+
+nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+.logo {
+    font-size: var(--fs-logo);
+    color: var(--clr-title-200);
+}
