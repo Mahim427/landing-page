@@ -224,9 +224,9 @@ nav a:hover {
 
 
 /* About */
-/* #about {
+#about {
     text-align: center;
     padding: var(--sec-pad-top-bot) 0;
     background-color: var(--clr-text-500);
     font-size: var(--fs-secondary);
-} */
+}
