@@ -116,10 +116,13 @@ h3 {
     background-color: var(--clr-btn-hover);
 }
 
-/* Header */
-header {
+/* Header & Footer */
+header,
+footer {
     background-color: var(--clr-bg);
-    padding: 20px 0;
+    padding: 32px 0;
+    color: var(--clr-text-500);
+    font-size: var(--fs-secondary);
 }
 
 header .container {
@@ -128,14 +131,14 @@ header .container {
     align-items: center;
 }
 
+footer .container {
+    display: flex;
+    justify-content: center;
+}
+
 nav ul {
     display: flex;
     gap: 20px;
-}
-
-nav a {
-    font-size: var(--fs-secondary);
-    color: var(--clr-text-500);
 }
 
 nav a:hover {
@@ -232,6 +235,7 @@ nav a:hover {
     font-size: var(--fs-secondary);
 }
 
+
 /* Testimonials */
 #testimonials {
     padding: var(--sec-pad-top-bot) 0;
@@ -277,6 +281,8 @@ nav a:hover {
     font-style: italic;
 }
 
+
+/* Commission */
 #commission {
     background-color: var(--clr-text-500);
     padding: var(--sec-pad-top-bot);
