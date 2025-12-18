@@ -276,3 +276,23 @@ nav a:hover {
     font-weight: var(--fw-black);
     font-style: italic;
 }
+
+#commission {
+    background-color: var(--clr-text-500);
+    padding: var(--sec-pad-top-bot);
+    color: var(--clr-text-500);
+    font-size: var(--fs-secondary);
+}
+
+#commission .container {
+    background-color: var(--clr-bg);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px 70px;
+    border-radius: 15px;
+}
+
+.commission-text h3 {
+    color: #fff;
+}
