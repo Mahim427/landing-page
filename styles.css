@@ -1,18 +1,28 @@
 :root {
-    --clr-title-200: #f9faf8;
-    --clr-text-500: #e5e7eb;
-    --clr-title-800: #1f2937;
+    /* Amber / Gold Accents */
+    --clr-amber: #D4AF37;
+    --clr-amber-light: #F8E9B5;
+    --clr-amber-muted: #C8B48A;
+    --clr-amber-hover: #E8C457;
 
-    --clr-bg: #1f2937;
-    --clr-btn: #3882f6;
-    --clr-btn-hover: #0b64f4;
+    /* Backgrounds */
+    --clr-bg: #0A0809;
+    --clr-bg-card: #141213;
 
-    /* --font: Roboto, sans-serif; */
+    /* Borders / Dividers */
+    --clr-border: #2A2521;
+
+    /* Shadows */
+    --clr-shadow-amber: rgba(212, 175, 55, 0.2);
+
+    /* Buttons */
+    --clr-btn: #D4AF37;
+    --clr-btn-hover: #E8C457;
+    --clr-btn-text: #0A0809;
+
     --font: "IM Fell English", serif;
-    --header-font: 'Cinzel', serif;
 
     /*Font Weight*/
-    --fw-light: 300;
     --fw-black: 900;
 
     /* Font Size */
@@ -25,7 +35,7 @@
 
     /* Section Width */
     --sec-width: 1300px;
-    --sec-pad-top-bot: 60px;
+    --sec-pad-top-bot: 80px;
 }
 
 
@@ -67,27 +77,38 @@ ul {
 body {
     font-family: var(--font);
     font-size: var(--fs-regular);
+    background-color: var(--clr-bg);
+    color: var(--clr-amber-light);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--clr-amber);
+    font-weight: var(--fw-black);
 }
 
 h1 {
     font-size: var(--fs-h1);
-    color: var(--clr-title-200);
-    font-weight: var(--fw-black);
     margin-bottom: 16px;
 }
 
 h2 {
-    color: var(--clr-title-800);
     font-size: var(--fs-h2);
-    font-weight: var(--fw-black);
     text-align: center;
     margin-bottom: 30px;
 }
 
 h3 {
     font-size: var(--fs-h3);
-    color: var(--clr-title-800);
-    font-weight: var(--fw-black);
+}
+
+.section-divider {
+    text-align: center;
+    color: var(--clr-amber);
+    font-size: 2rem;
+    margin: 48px 0;
+    opacity: 0.8;
 }
 
 .container {
@@ -102,12 +123,12 @@ h3 {
     display: inline-block;
     font: inherit;
     font-weight: 700;
-    color: var(--clr-body);
+    color: var(--clr-btn-text);
     padding: 15px 20px;
     background: var(--clr-btn);
     border: none;
     border-radius: 8px;
-    box-shadow: 1px 1px 4px var(--clr-text-500);
+    box-shadow: 0 4px 12px var(--clr-shadow-amber);
     transition: .4s;
     cursor: pointer;
 }
@@ -116,13 +137,12 @@ h3 {
     background-color: var(--clr-btn-hover);
 }
 
-/* Header & Footer */
-header,
-footer {
+/* Header */
+header {
     background-color: var(--clr-bg);
     padding: 32px 0;
-    color: var(--clr-text-500);
     font-size: var(--fs-secondary);
+    border-bottom: 1px solid var(--clr-border);
 }
 
 header .container {
@@ -131,24 +151,21 @@ header .container {
     align-items: center;
 }
 
-footer .container {
-    display: flex;
-    justify-content: center;
-}
-
 nav ul {
     display: flex;
     gap: 20px;
 }
 
 nav a:hover {
+    color: var(--clr-amber-hover);
     text-decoration: underline;
     text-underline-offset: 8px;
 }
 
 .logo {
     font-size: var(--fs-logo);
-    color: var(--clr-title-200);
+    font-weight: var(--fw-black);
+    color: var(--clr-amber);
 }
 
 
@@ -168,15 +185,8 @@ nav a:hover {
 
 .hero-content {
     flex: 1;
-    color: var(--clr-text-500);
     font-size: var(--fs-secondary);
 }
-
-/* .hero-content h1 {
-    color: var(--clr-title-200);
-    font-weight: var(--fw-black);
-    margin-bottom: 16px;
-} */
 
 .hero-content p {
     margin-bottom: 20px;
@@ -195,12 +205,6 @@ nav a:hover {
     padding: var(--sec-pad-top-bot) 0;
 }
 
-/* #weapons h2 {
-    color: var(--clr-title-800);
-    font-weight: var(--fw-black);
-    margin-bottom: 30px;
-} */
-
 .item-list {
     display: flex;
     justify-content: space-evenly;
@@ -212,6 +216,11 @@ nav a:hover {
     flex: 1 1 30%;
     min-width: 200px;
     max-width: 300px;
+    background-color: var(--clr-bg-card);
+    border: 1px solid var(--clr-border);
+    box-shadow: 0 4px 12px var(--clr-shadow-amber);
+    padding: 16px;
+    margin: 16px 0;
 }
 
 .item img {
@@ -231,7 +240,6 @@ nav a:hover {
 #about {
     text-align: center;
     padding: var(--sec-pad-top-bot) 0;
-    background-color: var(--clr-text-500);
     font-size: var(--fs-secondary);
 }
 
@@ -244,12 +252,6 @@ nav a:hover {
 #testimonials .container {
     padding: 0 50px;
 }
-
-/* .testimonial-list {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-} */
 
 .testimonial-card {
     display: flex;
@@ -273,32 +275,43 @@ nav a:hover {
 .quote-text {
     font-size: var(--fs-h3);
     margin-bottom: 20px;
+    font-style: italic;
 }
 
 .quote-author {
+    color: var(--clr-amber);
     font-size: var(--fs-secondary);
     font-weight: var(--fw-black);
-    font-style: italic;
 }
 
 
 /* Commission */
 #commission {
-    background-color: var(--clr-text-500);
     padding: var(--sec-pad-top-bot);
-    color: var(--clr-text-500);
     font-size: var(--fs-secondary);
 }
 
 #commission .container {
-    background-color: var(--clr-bg);
+    background-color: var(--clr-bg-card);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     padding: 50px 70px;
     border-radius: 15px;
+    box-shadow: 0 4px 12px var(--clr-shadow-amber);
 }
 
-.commission-text h3 {
-    color: #fff;
+
+/* Footer */
+footer {
+    background-color: var(--clr-bg);
+    padding: 32px 0;
+    color: var(--clr-amber-muted);
+    font-size: var(--fs-regular);
+    border-top: 1px solid var(--clr-border);
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
 }
